@@ -3,7 +3,14 @@
 *  
 *  A collection of scripts developed to populate and manage Google Classrooms. By Andrew Chiu achiu@mchk.edu.hk / Twitter: @chew_ed
 *
+*  Instructions for use: 
+*. Using a user that has Google Classroom access (usually a dedicated Google Classroom GSuite account or maybe an admin account), create 
+*. a new Google Spreadsheet. Go to menu: Tools --> Script Editor and paste this script into the script editor. 
+*  In the script editor, go to menu Resources --> Advanced Google Services and enable Google Classroom API V1, with the name "Classroom" and switch on.
+*  Run the function getAllClassrooms() from the script editor. The first time you run this you will need to authorise the script. It runs successfully if it 
+*  fills the active spreadsheet with a list of the Google Classrooms accessible by the account used.
 *
+*  See notes below for other functions for sheets you need to create in order to run those.
 */
 
 
@@ -60,8 +67,8 @@ function AddPeopleToClassroom(){
 /**
  *  function AddTeacherToClassroom()
  *
- *  Adds the list of given users (email addresses) to the classroom on the sheet "AddStudent"
- *  Expects a sheet in the spreadsheet named "AddStudent", with 3 columns: 
+ *  Adds the list of given teacher (email addresses) on the sheet "AddTeacher" to the listed classroom as teachers. 
+ *  Expects a sheet in the spreadsheet named "AddTeacher", with 3 columns: 
  *. A: Classroom Name (this is optional)
  *. B: Classroom ID (required. must be column B)
  *  C: Teacher email (required. must be column C)
